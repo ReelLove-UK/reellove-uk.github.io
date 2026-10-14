@@ -72,7 +72,7 @@
       <tr><td data-label="What">Sign-in</td><td data-label="Details">Your email address</td><td data-label="Why">To send sign-in codes and identify your account</td></tr>
       <tr><td data-label="What">Profile</td><td data-label="Details">First name, date of birth, gender, who you'd like to meet, age range, what you're looking for, 3 photos</td><td data-label="Why">To build your profile, check you're 18+, and find suitable matches</td></tr>
       <tr><td data-label="What">Location</td><td data-label="Details">Your London postcode district (e.g. E8) and the distance you'll travel. If you tap <em>Use my location</em>, your phone's location is used once to find your district; your exact location is never saved</td><td data-label="Why">To match you with people nearby</td></tr>
-      <tr><td data-label="What">Reels</td><td data-label="Details">Links to the TikTok and Instagram Reels you share, and the themes and vibes we work out from them (your taste profile)</td><td data-label="Why">To match you on taste</td></tr>
+      <tr><td data-label="What">Reels</td><td data-label="Details">Links to the TikTok and Instagram Reels you share, and the themes, vibes and topics (like &ldquo;jazz&rdquo;) we work out from them (your taste profile)</td><td data-label="Why">To match you on taste</td></tr>
       <tr><td data-label="What">Matches and feedback</td><td data-label="Details">Your matches, Interested / Pass, why you passed (if you say), and reactions to Reels. Optional notes are seen only by the ReelLove team</td><td data-label="Why">To show your matches and improve future ones</td></tr>
       <tr><td data-label="What">Chats</td><td data-label="Details">Messages and Reels you send to your matches</td><td data-label="Why">To run the chat</td></tr>
       <tr><td data-label="What">Safety</td><td data-label="Details">Reports and blocks you make, and reports made about you</td><td data-label="Why">To keep people safe</td></tr>
@@ -82,9 +82,10 @@
   <p>We don't collect your contacts, your TikTok or Instagram login, or anything you watch or like in those apps. ReelLove only sees the Reels you choose to share.</p>
 
   <h2>How we use it</h2>
-  <p><strong>Working out your taste.</strong> When you share a TikTok Reel, we fetch its public caption from TikTok and send it to Claude, an AI model made by Anthropic, which picks out themes and vibes. The caption is not stored; only the themes are kept. Instagram Reels are shown but not analysed.</p>
+  <p><strong>Working out your taste.</strong> When you share a Reel, we read its public caption (including any hashtags) and send it to Claude, an AI model made by Anthropic, which picks out themes, vibes and a few specific topics in our own words. For TikTok, our server fetches the caption from TikTok. For Instagram, your phone reads the Reel&rsquo;s link preview (the same preview iMessage shows) and sends us only the caption, not the account name or picture. The caption and hashtags are not stored; only our own themes, vibes and topics are kept.</p>
+  <p><strong>Events.</strong> We may use your topics to invite you, in the app, to ReelLove events you&rsquo;d enjoy, such as a jazz night for people who share jazz Reels.</p>
   <p><strong>Matching.</strong> Every day we compare people's taste profiles, preferences and distance. Claude then helps choose matches and writes a one-line reason for each. Claude only sees themes, vibes and a short summary of past choices. It never sees names, ages, photos or chats.</p>
-  <p><strong>What other people see.</strong> A match sees your first name, age, photos, postcode area and rough distance, what you're looking for, up to 3 of your shared Reels (you can hide any), and the reason you were matched. Your taste profile is private: only you can see it.</p>
+  <p><strong>What other people see.</strong> A match sees your first name, age, photos, postcode area and rough distance, what you're looking for, the Reels you pin to your profile (up to 3), up to 3 more of your shared Reels picked for what you have in common (you can hide any), and the reason you were matched. Your taste profile is private: only you can see it.</p>
   <p><strong>Chats.</strong> Only you and your match can read your chat. If someone reports a chat, the ReelLove team can read the most recent messages in it to deal with the report.</p>
   <p><strong>Our legal bases</strong> (UK GDPR): providing the service you signed up for, your consent (for analysing the Reels you share, which you can withdraw by deleting them), and our legitimate interest in keeping the app safe.</p>
   <p>We don't sell your data or show you ads.</p>
@@ -95,10 +96,10 @@
     <thead><tr><th>Service</th><th>What it does</th><th>What it receives</th></tr></thead>
     <tbody>
       <tr><td data-label="Service">Supabase</td><td data-label="What it does">Database, sign-in, photo storage and server (London region)</td><td data-label="What it receives">Everything listed above</td></tr>
-      <tr><td data-label="Service">Anthropic (Claude)</td><td data-label="What it does">Works out themes from Reels and helps pick matches</td><td data-label="What it receives">Reel captions, themes, vibes, a summary of past choices. No names, ages, photos or chats</td></tr>
+      <tr><td data-label="Service">Anthropic (Claude)</td><td data-label="What it does">Works out themes from Reels and helps pick matches</td><td data-label="What it receives">Reel captions (TikTok and Instagram), themes, vibes, a summary of past choices. No names, ages, photos or chats</td></tr>
       <tr><td data-label="Service">Resend</td><td data-label="What it does">Sends sign-in code emails</td><td data-label="What it receives">Your email address</td></tr>
       <tr><td data-label="Service">Expo and Apple</td><td data-label="What it does">Deliver phone notifications, and the test app through TestFlight</td><td data-label="What it receives">A notification token, the notification text</td></tr>
-      <tr><td data-label="Service">TikTok and Instagram</td><td data-label="What it does">Play Reels inside the app</td><td data-label="What it receives">When a Reel plays, it loads from TikTok or Instagram under their own privacy policies</td></tr>
+      <tr><td data-label="Service">TikTok and Instagram</td><td data-label="What it does">Play Reels inside the app, and provide captions of the Reels you share</td><td data-label="What it receives">The link of a Reel you share, when we read its caption; and, when a Reel plays, it loads from TikTok or Instagram under their own privacy policies</td></tr>
     </tbody>
   </table></div>
   <p>Some of these services are based outside the UK, so limited data may be processed abroad. What goes to them is kept to the minimum in the table.</p>
